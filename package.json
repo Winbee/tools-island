@@ -1,0 +1,34 @@
+{
+  "name": "tools-island",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.4.1",
+    "@astrojs/starlight": "^0.17.3",
+    "@astrojs/starlight-tailwind": "^2.0.1",
+    "@astrojs/svelte": "^5.0.3",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.3.5",
+    "he": "^1.2.0",
+    "install": "^0.13.0",
+    "sharp": "^0.32.5",
+    "svelte": "^4.2.10",
+    "tailwind-merge": "^2.2.1",
+    "tailwind-variants": "^0.1.20",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "xml-formatter": "^3.6.2",
+    "yaml": "^2.3.4"
+  },
+  "devDependencies": {
+    "flowbite": "^2.2.1",
+    "flowbite-svelte": "^0.44.23"
+  }
+}

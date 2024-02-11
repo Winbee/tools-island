@@ -1,0 +1,51 @@
+---
+interface Props {
+  label: string;
+  value: string;
+  width?: string;
+  options: Array<{
+    label: string;
+    value: string;
+    selected: boolean;
+  }>;
+}
+---
+
+<label style={`--sl-select-width: ${Astro.props.width}`}>
+  <span class="sr-only">{Astro.props.label}</span>
+  <select
+    value={Astro.props.value}
+    class="block w-full text-gray-900 bg-gray-50 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 text-sm p-2.5"
+  >
+    {
+      Astro.props.options.map(({ value, selected, label }) => (
+        <option value={value} selected={selected} set:html={label} />
+      ))
+    }
+  </select>
+</label>
+
+<style>
+  label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--sl-color-gray-1);
+  }
+
+  label:hover {
+    color: var(--sl-color-gray-2);
+  }
+
+  option {
+    background-color: var(--sl-color-bg-nav);
+    color: var(--sl-color-gray-1);
+  }
+
+  @media (min-width: 50rem) {
+    select {
+      font-size: var(--sl-text-sm);
+    }
+  }
+</style>
