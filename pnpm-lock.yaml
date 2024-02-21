@@ -38,6 +38,9 @@ dependencies:
   svelte:
     specifier: ^4.2.10
     version: 4.2.10
+  svelte-awesome-color-picker:
+    specifier: ^3.0.5
+    version: 3.0.5(svelte@4.2.10)
   tailwind-merge:
     specifier: ^2.2.1
     version: 2.2.1
@@ -1742,6 +1745,10 @@ packages:
     dependencies:
       color-convert: 2.0.1
       color-string: 1.9.1
+    dev: false
+
+  /colord@2.9.3:
+    resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
     dev: false
 
   /comma-separated-tokens@2.0.3:
@@ -4494,6 +4501,24 @@ packages:
   /supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+    dev: false
+
+  /svelte-awesome-color-picker@3.0.5(svelte@4.2.10):
+    resolution: {integrity: sha512-8btMs7m8nVkKrKXlqwGJGcial+3fgPi5f7H6m7Vpq+aPuSzT4gDcC8IcvGdR+GEaORgBCO+Q8t41FvpVBrSbLg==}
+    peerDependencies:
+      svelte: ^3.55.1 || ^4.0.0
+    dependencies:
+      colord: 2.9.3
+      svelte: 4.2.10
+      svelte-awesome-slider: 1.1.0(svelte@4.2.10)
+    dev: false
+
+  /svelte-awesome-slider@1.1.0(svelte@4.2.10):
+    resolution: {integrity: sha512-MgY6ZdBON42HVZqNWNjq2HOgyDlC35q0TNbV/YO1l1/bcb5yhM8EE97h1AJ/7F6t6sLzXhQ3qPf5nGyCdDSnCg==}
+    peerDependencies:
+      svelte: ^3.54.0 || ^4.0.0
+    dependencies:
+      svelte: 4.2.10
     dev: false
 
   /svelte-hmr@0.15.3(svelte@4.2.10):

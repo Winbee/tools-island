@@ -160,7 +160,7 @@
   </div>
 
   <div>
-    <Label for="output" class="mb-2">Outpi</Label>
+    <Label for="output" class="mb-2">Output</Label>
     <Textarea id="output" rows="4" bind:value={output} />
   </div>
 </FormWrapper>
