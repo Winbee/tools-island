@@ -32,5 +32,6 @@
   "devDependencies": {
     "flowbite": "^2.2.1",
     "flowbite-svelte": "^0.44.23"
-  }
+  },
+  "packageManager": "pnpm@8.14.1"
 }
