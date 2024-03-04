@@ -9,11 +9,11 @@ export default defineConfig({
     starlight({
       title: "Tools Island",
       logo: {
-        src: "./src/assets/island-logo-3.svg",
+        src: "./src/assets/island-color.svg",
       },
       logo: {
-        light: "./src/assets/island-logo-3.svg",
-        dark: "./src/assets/island-logo-3-dark.svg",
+        light: "./src/assets/island-color.svg",
+        dark: "./src/assets/island-color-dark.svg",
       },
       customCss: ["./src/styles/custom.css"],
       components: {
