@@ -7,21 +7,18 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [
     starlight({
-      title: "Tools Island",
-      logo: {
-        src: "./src/assets/island-color.svg",
-      },
+      title: "Tools island",
       logo: {
         light: "./src/assets/island-color.svg",
         dark: "./src/assets/island-color-dark.svg",
       },
       customCss: ["./src/styles/custom.css"],
       components: {
-        // Override the default `SocialIcons` component.
+        // Override the default `ThemeSelect` component.
         ThemeSelect: "./src/components/ThemeSelect.astro",
       },
       social: {
-        github: "https://github.com/withastro/starlight",
+        github: "https://github.com/Winbee/tools-island",
       },
       tableOfContents: false,
       pagination: false,
