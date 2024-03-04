@@ -5,6 +5,8 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://winbee.github.com",
+  base: "/tools-island",
   integrations: [
     starlight({
       title: "Tools island",
