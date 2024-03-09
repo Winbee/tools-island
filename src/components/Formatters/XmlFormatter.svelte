@@ -53,7 +53,7 @@
       id="input"
       rows="4"
       bind:value={input}
-      class="min-h-[calc((100vh-20rem)/2)]"
+      class="min-h-[calc((100vh-20rem)/2)] resize-y"
     />
   </div>
 </FormWrapper>

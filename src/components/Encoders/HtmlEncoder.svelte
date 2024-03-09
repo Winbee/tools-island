@@ -33,7 +33,7 @@
       rows="4"
       on:input={turnToEncoded}
       bind:value={decodedHtml}
-      class="min-h-[calc((100vh-20rem)/2)]"
+      class="min-h-[calc((100vh-20rem)/2)] resize-y"
     />
   </div>
 
@@ -44,7 +44,7 @@
       rows="4"
       on:input={turnToDecoded}
       bind:value={encodedHtml}
-      class="min-h-[calc((100vh-20rem)/2)]"
+      class="min-h-[calc((100vh-20rem)/2)] resize-y"
     />
   </div>
 </FormWrapper>

@@ -160,7 +160,7 @@
       id="input"
       rows="4"
       bind:value={input}
-      class="min-h-[calc((100vh-28rem)/2)]"
+      class="min-h-[calc((100vh-28rem)/2)] resize-y"
     />
   </div>
 
@@ -170,7 +170,7 @@
       id="output"
       rows="4"
       bind:value={output}
-      class="min-h-[calc((100vh-28rem)/2)]"
+      class="min-h-[calc((100vh-28rem)/2)] resize-y"
     />
   </div>
 </FormWrapper>

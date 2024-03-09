@@ -76,7 +76,7 @@
       id="output"
       rows="4"
       bind:value={output}
-      class="min-h-[calc((100vh-20rem)/2)]"
+      class="min-h-[calc((100vh-20rem)/2)] resize-y"
     />
   </div>
 </FormWrapper>

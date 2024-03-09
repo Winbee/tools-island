@@ -81,7 +81,13 @@
 
   <div>
     <Label for="output" class="mb-2">Computed checksum</Label>
-    <Textarea id="output" rows="4" bind:value={output} readonly />
+    <Textarea
+      id="output"
+      rows="4"
+      bind:value={output}
+      readonly
+      class="min-h-[calc((100vh-40rem)/2)] resize-y"
+    />
   </div>
 
   <div>
@@ -91,6 +97,7 @@
       rows="4"
       bind:value={targetChecksum}
       color={isEmpty ? undefined : isEqual ? "green" : "red"}
+      class="min-h-[calc((100vh-40rem)/2)] resize-y"
     />
     {#if !isEmpty}
       {#if isEqual}
