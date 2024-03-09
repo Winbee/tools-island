@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import AstroPWA from "@vite-pwa/astro";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 
@@ -35,5 +36,6 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
+    AstroPWA(),
   ],
 });
