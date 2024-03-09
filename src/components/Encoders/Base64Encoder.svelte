@@ -48,6 +48,7 @@
       rows="4"
       on:input={turnToEncoded}
       bind:value={decodedBase64}
+      class="min-h-[calc((100vh-20rem)/2)]"
     />
   </div>
 
@@ -58,6 +59,7 @@
       rows="4"
       on:input={turnToDecoded}
       bind:value={encodedBase64}
+      class="min-h-[calc((100vh-20rem)/2)]"
     />
   </div>
 </FormWrapper>

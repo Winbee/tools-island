@@ -156,11 +156,21 @@
 
   <div>
     <Label for="input" class="mb-2">Input</Label>
-    <Textarea id="input" rows="4" bind:value={input} />
+    <Textarea
+      id="input"
+      rows="4"
+      bind:value={input}
+      class="min-h-[calc((100vh-28rem)/2)]"
+    />
   </div>
 
   <div>
     <Label for="output" class="mb-2">Output</Label>
-    <Textarea id="output" rows="4" bind:value={output} />
+    <Textarea
+      id="output"
+      rows="4"
+      bind:value={output}
+      class="min-h-[calc((100vh-28rem)/2)]"
+    />
   </div>
 </FormWrapper>

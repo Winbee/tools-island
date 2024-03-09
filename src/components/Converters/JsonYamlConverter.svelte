@@ -49,6 +49,7 @@
       rows="4"
       on:input={turnToYaml}
       bind:value={jsonString}
+      class="min-h-[calc((100vh-20rem)/2)]"
     />
   </div>
   <div>
@@ -58,6 +59,7 @@
       rows="4"
       on:input={turnToJson}
       bind:value={yamlString}
+      class="min-h-[calc((100vh-20rem)/2)]"
     />
   </div>
 </FormWrapper>
