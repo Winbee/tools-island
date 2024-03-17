@@ -63,13 +63,19 @@ dependencies:
 devDependencies:
   '@vite-pwa/astro':
     specifier: ^0.3.0
-    version: 0.3.0(astro@4.3.5)(vite-plugin-pwa@0.19.2)
+    version: 0.3.0(astro@4.3.5)(vite-plugin-pwa@0.19.4)
   flowbite:
     specifier: ^2.2.1
     version: 2.2.1
   flowbite-svelte:
     specifier: ^0.44.23
     version: 0.44.23(svelte@4.2.10)
+  vite-plugin-pwa:
+    specifier: ^0.19.4
+    version: 0.19.4(vite@5.0.12)(workbox-build@7.0.0)(workbox-window@7.0.0)
+  workbox-window:
+    specifier: ^7.0.0
+    version: 7.0.0
 
 packages:
 
@@ -2181,7 +2187,7 @@ packages:
   /@ungap/structured-clone@1.2.0:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  /@vite-pwa/astro@0.3.0(astro@4.3.5)(vite-plugin-pwa@0.19.2):
+  /@vite-pwa/astro@0.3.0(astro@4.3.5)(vite-plugin-pwa@0.19.4):
     resolution: {integrity: sha512-2fH9ifzMW8dmeydJ6SuttLR5FCDvSoaTpyxblasR6icsJbR1he4igJhauw4jvmQXOb99Psl+bsBSoUwsdSnSJA==}
     peerDependencies:
       '@vite-pwa/assets-generator': ^0.2.4
@@ -2192,7 +2198,7 @@ packages:
         optional: true
     dependencies:
       astro: 4.3.5(typescript@5.3.3)
-      vite-plugin-pwa: 0.19.2(vite@5.0.12)(workbox-build@7.0.0)(workbox-window@7.0.0)
+      vite-plugin-pwa: 0.19.4(vite@5.0.12)(workbox-build@7.0.0)(workbox-window@7.0.0)
     dev: true
 
   /@volar/kit@1.11.1(typescript@5.3.3):
@@ -3428,7 +3434,7 @@ packages:
       function-bind: 1.1.2
       has-proto: 1.0.3
       has-symbols: 1.0.3
-      hasown: 2.0.0
+      hasown: 2.0.1
     dev: true
 
   /get-own-enumerable-property-symbols@3.0.2:
@@ -3875,7 +3881,7 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       es-errors: 1.3.0
-      hasown: 2.0.0
+      hasown: 2.0.1
       side-channel: 1.0.6
     dev: true
 
@@ -6632,8 +6638,8 @@ packages:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  /vite-plugin-pwa@0.19.2(vite@5.0.12)(workbox-build@7.0.0)(workbox-window@7.0.0):
-    resolution: {integrity: sha512-LSQJFPxCAQYbRuSyc9EbRLRqLpaBA9onIZuQFomfUYjWSgHuQLonahetDlPSC9zsxmkSEhQH8dXZN8yL978h3w==}
+  /vite-plugin-pwa@0.19.4(vite@5.0.12)(workbox-build@7.0.0)(workbox-window@7.0.0):
+    resolution: {integrity: sha512-KiEFXaYEj2Hg1it+yECy75oqNmlXimI7BaLx7Sxl7Qsd9EIVxaf3GX1mZdLpHe83pDgHBNwm9USGQxSCNp5m7A==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       '@vite-pwa/assets-generator': ^0.2.4
