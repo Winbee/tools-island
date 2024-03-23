@@ -2,8 +2,7 @@
   import { Label, Textarea } from "flowbite-svelte";
   import FormWrapper from "../FormWrapper.svelte";
 
-  let decodedUrl: string =
-    'https://insights.hotjar.com/sites/14/trends?filter-series=[{"AND":[{"CONTAINS":{"all_page_paths":"pixel"}},{"NOT":{"CONTAINS":{"all_page_paths":"sub"}}}]}]&date={"DAYS_AGO":{"created":30}}';
+  let decodedUrl: string = 'https://test.com?param1={"prop":"abc"}';
   let encodedUrl: string = "";
 
   function turnToDecoded(
