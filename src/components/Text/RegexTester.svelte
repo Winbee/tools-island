@@ -62,10 +62,10 @@
       <span>Invalid regex</span>
     {:else}
       <div
-        class="grid grid-cols-2 rounded-lg border border-solid border-gray-300 overflow-hidden"
+        class="grid grid-cols-2 rounded-lg border border-solid border-gray-200 dark:border-gray-600 overflow-hidden"
       >
-        <div class="bg-gray-50 p-1 font-medium">Method</div>
-        <div class="bg-gray-50 p-1 font-medium">Result</div>
+        <div class="bg-gray-50 dark:bg-gray-700 p-1 font-medium">Method</div>
+        <div class="bg-gray-50 dark:bg-gray-700 p-1 font-medium">Result</div>
         <div class="p-1">String.match()</div>
         <div class="p-1">
           {JSON.stringify(stringMatch, null, " ")}
@@ -91,15 +91,17 @@
           {#if regexExec === null}
             <div class="p-1">{regexExec}</div>
           {:else}
-            <div class="bg-gray-50 p-1 font-medium">Property</div>
-            <div class="bg-gray-50 p-1 font-medium">Value</div>
+            <div class="bg-gray-50 dark:bg-gray-700 p-1 font-medium">
+              Property
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-700 p-1 font-medium">Value</div>
             <div class="p-1">"raw indexes"</div>
             <div class="p-1">
-              <span>{JSON.stringify(regexExec)}</span>
+              <span>{JSON.stringify(regexExec, null, " ")}</span>
             </div>
             <div class="p-1">groups</div>
             <div class="p-1">
-              {JSON.stringify(regexExec.groups)}
+              {JSON.stringify(regexExec.groups, null, " ")}
             </div>
             <div class="p-1">index</div>
             <div class="p-1">
@@ -107,7 +109,7 @@
             </div>
             <div class="p-1">input</div>
             <div>
-              {JSON.stringify(regexExec.input)}
+              {JSON.stringify(regexExec.input, null, " ")}
             </div>
           {/if}
         </div>
