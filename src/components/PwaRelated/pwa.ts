@@ -11,20 +11,25 @@ window.addEventListener("load", () => {
 
   let refreshSW: ((reloadPage?: boolean) => Promise<void>) | undefined;
 
-  const refreshCallback = () => refreshSW?.(true);
+  const refreshCallback = () => {
+    refreshSW?.(true);
+  };
 
   const hidePwaToast = (raf = false) => {
     if (raf) {
       requestAnimationFrame(() => hidePwaToast(false));
       return;
     }
-    if (pwaToast.classList.contains("refresh"))
+    if (pwaToast.classList.contains("refresh")) {
       pwaRefreshBtn.removeEventListener("click", refreshCallback);
+    }
 
     pwaToast.classList.remove("show", "refresh");
   };
   const showPwaToast = (offline: boolean) => {
-    if (!offline) pwaRefreshBtn.addEventListener("click", refreshCallback);
+    if (!offline) {
+      pwaRefreshBtn.addEventListener("click", refreshCallback);
+    }
     requestAnimationFrame(() => {
       hidePwaToast(false);
       if (!offline) pwaToast.classList.add("refresh");
@@ -32,7 +37,9 @@ window.addEventListener("load", () => {
     });
   };
 
-  pwaCloseBtn.addEventListener("click", () => hidePwaToast(true));
+  pwaCloseBtn.addEventListener("click", () => {
+    hidePwaToast(true);
+  });
 
   refreshSW = registerSW({
     immediate: true,

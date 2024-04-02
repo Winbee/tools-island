@@ -1,0 +1,9 @@
+---
+import SiteTitle from "@astrojs/starlight/components/SiteTitle.astro";
+import type { Props } from "@astrojs/starlight/props";
+import ReloadPrompt from "./PwaRelated/ReloadPrompt.astro";
+---
+
+<SiteTitle {...Astro.props} />
+<!-- We inject the PWA logic here -->
+<ReloadPrompt />

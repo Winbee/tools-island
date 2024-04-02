@@ -1,13 +1,9 @@
 ---
 import Select from "./Select.astro";
 import type { Props } from "@astrojs/starlight/props";
-import ReloadPrompt from "./PwaRelated/ReloadPrompt.astro";
 
 const { labels } = Astro.props;
 ---
-
-<!-- We inject the PWA logic here -->
-<ReloadPrompt />
 
 <starlight-theme-select>
   {

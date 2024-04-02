@@ -2,7 +2,7 @@
   import { Input, Label } from "flowbite-svelte";
   import FormWrapper from "../FormWrapper.svelte";
 
-  let dateString: string = `09/19/2023, 20:00:00`;
+  let dateString: string = new Date().toLocaleString();
   let unixTimeString: string = "";
   let iso8601String: string = "";
 

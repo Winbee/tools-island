@@ -17,8 +17,8 @@ export default defineConfig({
       },
       customCss: ["./src/styles/custom.css"],
       components: {
-        // Override the default `ThemeSelect` component.
         ThemeSelect: "./src/components/ThemeSelect.astro",
+        SiteTitle: "./src/components/CustomSiteTitle.astro",
       },
       social: {
         github: "https://github.com/Winbee/tools-island",
@@ -55,6 +55,7 @@ export default defineConfig({
         short_name: "Tools island",
         description: "Various JS tools/utils built in a static site",
         background_color: "#ffffff",
+        theme_color: "#c7d2fe",
         display: "minimal-ui",
         icons: [
           {

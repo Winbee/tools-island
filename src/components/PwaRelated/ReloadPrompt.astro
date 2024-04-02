@@ -1,10 +1,16 @@
+---
+import { Button } from "flowbite-svelte";
+---
+
 <script src="./pwa.ts"></script>
 <div id="pwa-toast" role="alert" aria-labelledby="toast-message">
-  <div class="message">
+  <div class="mb-2 text-sm font-normal message">
     <span id="toast-message"></span>
   </div>
-  <button id="pwa-refresh"> Reload </button>
-  <button id="pwa-close"> Close </button>
+  <div class="grid grid-cols-2 gap-2">
+    <Button size="xs" id="pwa-refresh"> Reload </Button>
+    <Button size="xs" id="pwa-close"> Close </Button>
+  </div>
 </div>
 
 <style>
@@ -13,7 +19,7 @@
     position: fixed;
     right: 0;
     bottom: 0;
-    margin: 16px;
+    margin: 10px;
     padding: 12px;
     border: 1px solid #8885;
     border-radius: 4px;
