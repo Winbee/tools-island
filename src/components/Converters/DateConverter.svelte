@@ -2,7 +2,7 @@
   import { Input, Label } from "flowbite-svelte";
   import FormWrapper from "../FormWrapper.svelte";
 
-  let dateString: string = new Date().toLocaleString();
+  let dateString: string = new Date().toString();
   let unixTimeString: string = "";
   let iso8601String: string = "";
 
@@ -16,7 +16,11 @@
   function turnFromDate(
     event: Event & { currentTarget: EventTarget & HTMLInputElement }
   ) {
-    turnFromDateString(event.currentTarget.value);
+    try {
+      turnFromDateString(event.currentTarget.value);
+    } catch (e) {
+      console.error(e);
+    }
   }
 
   function turnFromUnixTime(
@@ -38,15 +42,27 @@
   }
 
   function turnToDate(date: Date) {
-    dateString = date.toLocaleString();
+    try {
+      dateString = date.toString();
+    } catch (e) {
+      console.error(e);
+    }
   }
 
   function turnToUnixTime(date: Date) {
-    unixTimeString = `${date.getTime()}`;
+    try {
+      unixTimeString = `${date.getTime()}`;
+    } catch (e) {
+      console.error(e);
+    }
   }
 
   function turnToIso8601(date: Date) {
-    iso8601String = date.toISOString();
+    try {
+      iso8601String = date.toISOString();
+    } catch (e) {
+      console.error(e);
+    }
   }
 
   turnFromDateString(dateString);
