@@ -3,25 +3,40 @@
   import FormWrapper from "../FormWrapper.svelte";
 
   let decodedUrl: string = 'https://test.com?param1={"prop":"abc"}';
+  let componentEncodedUrl: string = "";
   let encodedUrl: string = "";
 
-  function turnToDecoded(
+  function turnFromEncoded(
     event: Event & { currentTarget: EventTarget & HTMLTextAreaElement }
   ) {
     decodedUrl = decodeURI(event.currentTarget.value);
+    turnToComponentEncoded(decodedUrl);
   }
 
-  function turnToEncodedString(stringValue: string) {
+  function turnFromComponentEncoded(
+    event: Event & { currentTarget: EventTarget & HTMLTextAreaElement }
+  ) {
+    decodedUrl = decodeURIComponent(event.currentTarget.value);
+    turnToEncoded(decodedUrl);
+  }
+
+  function turnFromDecoded(
+    event: Event & { currentTarget: EventTarget & HTMLTextAreaElement }
+  ) {
+    turnToEncoded(event.currentTarget.value);
+    turnToComponentEncoded(event.currentTarget.value);
+  }
+
+  function turnToEncoded(stringValue: string) {
     encodedUrl = encodeURI(stringValue);
   }
 
-  function turnToEncoded(
-    event: Event & { currentTarget: EventTarget & HTMLTextAreaElement }
-  ) {
-    turnToEncodedString(event.currentTarget.value);
+  function turnToComponentEncoded(stringValue: string) {
+    componentEncodedUrl = encodeURIComponent(stringValue);
   }
 
-  turnToEncodedString(decodedUrl);
+  turnToEncoded(decodedUrl);
+  turnToComponentEncoded(decodedUrl);
 </script>
 
 <FormWrapper>
@@ -30,9 +45,20 @@
     <Textarea
       id="decoded"
       rows="4"
-      on:input={turnToEncoded}
+      on:input={turnFromDecoded}
       bind:value={decodedUrl}
-      class="min-h-[calc((100vh-20rem)/2)] resize-y"
+      class="min-h-[calc((100vh-25rem)/3)] resize-y"
+    />
+  </div>
+
+  <div>
+    <Label for="component-encoded" class="mb-2">Component encoded</Label>
+    <Textarea
+      id="component-encoded"
+      rows="4"
+      on:input={turnFromComponentEncoded}
+      bind:value={componentEncodedUrl}
+      class="min-h-[calc((100vh-25rem)/3)] resize-y"
     />
   </div>
 
@@ -41,9 +67,9 @@
     <Textarea
       id="encoded"
       rows="4"
-      on:input={turnToDecoded}
+      on:input={turnFromEncoded}
       bind:value={encodedUrl}
-      class="min-h-[calc((100vh-20rem)/2)] resize-y"
+      class="min-h-[calc((100vh-25rem)/3)] resize-y"
     />
   </div>
 </FormWrapper>
