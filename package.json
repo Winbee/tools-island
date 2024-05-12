@@ -21,6 +21,7 @@
     "lodash-es": "^4.17.21",
     "lorem-ipsum": "^2.0.8",
     "sharp": "^0.32.5",
+    "sql-formatter": "^15.3.1",
     "svelte": "^4.2.10",
     "svelte-awesome-color-picker": "^3.0.5",
     "tailwind-merge": "^2.2.1",
